@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="—title: CentOS7.4下搭建Elasticsearch6.2.4 date: 2018-05-12 02:03:09  准备Jdk1.8 安装过程 通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，然后tar–">
+<meta name="description" content="— title: CentOS7.4下搭建Elasticsearch6.2.4准备Jdk1.8 安装过程 通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，然后tar–zxvf是最安全稳定的方法。在不修改elastic">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Qifan Zhang">
 <meta property="og:url" content="http://yoursite.com/2018/05/12/centos-es/index.html">
 <meta property="og:site_name" content="Qifan Zhang">
-<meta property="og:description" content="—title: CentOS7.4下搭建Elasticsearch6.2.4 date: 2018-05-12 02:03:09  准备Jdk1.8 安装过程 通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，然后tar–">
+<meta property="og:description" content="— title: CentOS7.4下搭建Elasticsearch6.2.4准备Jdk1.8 安装过程 通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，然后tar–zxvf是最安全稳定的方法。在不修改elastic">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/05/12/centos-es/img1.png">
-<meta property="og:updated_time" content="2018-05-11T18:52:36.120Z">
+<meta property="og:updated_time" content="2018-05-11T19:00:55.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Qifan Zhang">
-<meta name="twitter:description" content="—title: CentOS7.4下搭建Elasticsearch6.2.4 date: 2018-05-12 02:03:09  准备Jdk1.8 安装过程 通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，然后tar–">
+<meta name="twitter:description" content="— title: CentOS7.4下搭建Elasticsearch6.2.4准备Jdk1.8 安装过程 通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，然后tar–zxvf是最安全稳定的方法。在不修改elastic">
 <meta name="twitter:image" content="http://yoursite.com/2018/05/12/centos-es/img1.png">
 
 
@@ -301,18 +301,15 @@
       
 
       
-        <p>﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿—<br>title: CentOS7.4下搭建Elasticsearch6.2.4</p>
-<p>date: 2018-05-12 02:03:09</p>
-<hr>
-<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Jdk1.8</p>
+        <p>﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿—</p>
+<h2 id="title-CentOS7-4下搭建Elasticsearch6-2-4"><a href="#title-CentOS7-4下搭建Elasticsearch6-2-4" class="headerlink" title="title: CentOS7.4下搭建Elasticsearch6.2.4"></a>title: CentOS7.4下搭建Elasticsearch6.2.4</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Jdk1.8</p>
 <h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ul>
 <li><p>通过java –version确认jdk版本。</p>
 <p> 如果出现openjdk请自行百度“Linux openjdk jdk1.8”</p>
 </li>
 <li><p>登录Elastic官网下载rpm/tar.gz版本。</p>
-<p> sftp传到服务器上，然后tar–zxvf是最安全稳定的方法。</p>
-<pre><code>-  在不修改elasticsearch.yml的前提下，elasticsearch也是可以运行的，但是一旦修改注释，让host等语句暴露，普通的服务器主机都会因为参数设置保守的问题被elasticsearch拒绝，这个时候就需要改一些参数，让服务器觉得自己很牛逼。
-</code></pre></li>
+<p> sftp传到服务器上，然后tar–zxvf是最安全稳定的方法。在不修改elasticsearch.yml的前提下，elasticsearch也是可以运行的，但是一旦修改注释，让host等语句暴露，普通的服务器主机都会因为参数设置保守的问题被elasticsearch拒绝，这个时候就需要改一些参数，让服务器觉得自己很牛逼。</p>
+</li>
 </ul>
 <p>感谢我的老师姚俊杰博士<a href="https://junjie-yao.info/" target="_blank" rel="noopener">junjie-yao.info</a>参照腾讯云社区相关指南帮我在root权限下配置好了相关参数。</p>
 <p>vm.max_map_count，nofile，nproc三个常见参数配置都在这篇<a href="https://cloud.tencent.com/developer/article/1014626" target="_blank" rel="noopener">文章</a>中有解答。</p>
@@ -320,7 +317,7 @@
 <li>选一台无相关的电脑，<a href="http://111.111.111.111:9200" target="_blank" rel="noopener">http://111.111.111.111:9200</a> 登录。</li>
 </ul>
 <p>若成功，则说明自用安装存储的搜索引擎基本完成。111.111.111.111为假设的服务器地址。</p>
-<h3 id="数据导入"><a href="#数据导入" class="headerlink" title="数据导入"></a>数据导入</h3><p>官方API文档:<a href="https://www.elastic.co/guide/en/elasticsearch/client/index.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/client/index.html</a></p>
+<h3 id="数据导入"><a href="#数据导入" class="headerlink" title="数据导入"></a>数据导入</h3><p>官方API文档：<a href="https://www.elastic.co/guide/en/elasticsearch/client/index.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/client/index.html</a></p>
 <p>着重介绍一下批量插入的方法</p>
 <p>唯一推荐<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="noopener">Bulk API</a></p>
 <pre><code class="bash">action_and_meta_data\n
@@ -411,8 +408,8 @@ ary @gotobed.json
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/03/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/05/03/hello-world/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -533,7 +530,7 @@ ary @gotobed.json
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装过程"><span class="nav-number">2.</span> <span class="nav-text">安装过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据导入"><span class="nav-number">3.</span> <span class="nav-text">数据导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入成功"><span class="nav-number">4.</span> <span class="nav-text">导入成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊Error"><span class="nav-number">5.</span> <span class="nav-text">特殊Error</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据导入验证"><span class="nav-number">6.</span> <span class="nav-text">数据导入验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Acknowledge"><span class="nav-number">7.</span> <span class="nav-text">Acknowledge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">8.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#title-CentOS7-4下搭建Elasticsearch6-2-4"><span class="nav-number">1.</span> <span class="nav-text">title: CentOS7.4下搭建Elasticsearch6.2.4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装过程"><span class="nav-number">1.2.</span> <span class="nav-text">安装过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据导入"><span class="nav-number">1.3.</span> <span class="nav-text">数据导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入成功"><span class="nav-number">1.4.</span> <span class="nav-text">导入成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊Error"><span class="nav-number">1.5.</span> <span class="nav-text">特殊Error</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据导入验证"><span class="nav-number">1.6.</span> <span class="nav-text">数据导入验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Acknowledge"><span class="nav-number">1.7.</span> <span class="nav-text">Acknowledge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.8.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
             
 
           </div>

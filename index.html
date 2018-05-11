@@ -300,18 +300,15 @@
       
         
           
-            <p>﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿—<br>title: CentOS7.4下搭建Elasticsearch6.2.4</p>
-<p>date: 2018-05-12 02:03:09</p>
-<hr>
-<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Jdk1.8</p>
+            <p>﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿—</p>
+<h2 id="title-CentOS7-4下搭建Elasticsearch6-2-4"><a href="#title-CentOS7-4下搭建Elasticsearch6-2-4" class="headerlink" title="title: CentOS7.4下搭建Elasticsearch6.2.4"></a>title: CentOS7.4下搭建Elasticsearch6.2.4</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Jdk1.8</p>
 <h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ul>
 <li><p>通过java –version确认jdk版本。</p>
 <p> 如果出现openjdk请自行百度“Linux openjdk jdk1.8”</p>
 </li>
 <li><p>登录Elastic官网下载rpm/tar.gz版本。</p>
-<p> sftp传到服务器上，然后tar–zxvf是最安全稳定的方法。</p>
-<pre><code>-  在不修改elasticsearch.yml的前提下，elasticsearch也是可以运行的，但是一旦修改注释，让host等语句暴露，普通的服务器主机都会因为参数设置保守的问题被elasticsearch拒绝，这个时候就需要改一些参数，让服务器觉得自己很牛逼。
-</code></pre></li>
+<p> sftp传到服务器上，然后tar–zxvf是最安全稳定的方法。在不修改elasticsearch.yml的前提下，elasticsearch也是可以运行的，但是一旦修改注释，让host等语句暴露，普通的服务器主机都会因为参数设置保守的问题被elasticsearch拒绝，这个时候就需要改一些参数，让服务器觉得自己很牛逼。</p>
+</li>
 </ul>
 <p>感谢我的老师姚俊杰博士<a href="https://junjie-yao.info/" target="_blank" rel="noopener">junjie-yao.info</a>参照腾讯云社区相关指南帮我在root权限下配置好了相关参数。</p>
 <p>vm.max_map_count，nofile，nproc三个常见参数配置都在这篇<a href="https://cloud.tencent.com/developer/article/1014626" target="_blank" rel="noopener">文章</a>中有解答。</p>
@@ -319,7 +316,7 @@
 <li>选一台无相关的电脑，<a href="http://111.111.111.111:9200" target="_blank" rel="noopener">http://111.111.111.111:9200</a> 登录。</li>
 </ul>
 <p>若成功，则说明自用安装存储的搜索引擎基本完成。111.111.111.111为假设的服务器地址。</p>
-<h3 id="数据导入"><a href="#数据导入" class="headerlink" title="数据导入"></a>数据导入</h3><p>官方API文档:<a href="https://www.elastic.co/guide/en/elasticsearch/client/index.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/client/index.html</a></p>
+<h3 id="数据导入"><a href="#数据导入" class="headerlink" title="数据导入"></a>数据导入</h3><p>官方API文档：<a href="https://www.elastic.co/guide/en/elasticsearch/client/index.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/client/index.html</a></p>
 <p>着重介绍一下批量插入的方法</p>
 <p>唯一推荐<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="noopener">Bulk API</a></p>
 <pre><code class="bash">action_and_meta_data\n
@@ -453,7 +450,7 @@ ary @gotobed.json
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/03/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/05/03/hello-world/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -505,15 +502,8 @@ ary @gotobed.json
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <hr>
+<h2 id="title-Welcome"><a href="#title-Welcome" class="headerlink" title="title: Welcome"></a>title: Welcome</h2><h2 id="CentOS7-4-ElasticSearch6-2-4"><a href="#CentOS7-4-ElasticSearch6-2-4" class="headerlink" title="CentOS7.4_ElasticSearch6.2.4"></a>CentOS7.4_ElasticSearch6.2.4</h2>
 
           
         
