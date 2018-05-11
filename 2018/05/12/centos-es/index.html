@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="—title: CentOS7.4下搭建Elasticsearch6.2.4date: 2018-05-12 02:03:09 tags:###准备 Jdk1.8 ###安装过程  通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，">
+<meta name="description" content="—title: CentOS7.4下搭建Elasticsearch6.2.4 date: 2018-05-12 02:03:09  准备Jdk1.8 安装过程 通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，然后tar–">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Qifan Zhang">
 <meta property="og:url" content="http://yoursite.com/2018/05/12/centos-es/index.html">
 <meta property="og:site_name" content="Qifan Zhang">
-<meta property="og:description" content="—title: CentOS7.4下搭建Elasticsearch6.2.4date: 2018-05-12 02:03:09 tags:###准备 Jdk1.8 ###安装过程  通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，">
+<meta property="og:description" content="—title: CentOS7.4下搭建Elasticsearch6.2.4 date: 2018-05-12 02:03:09  准备Jdk1.8 安装过程 通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，然后tar–">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-11T18:44:28.837Z">
+<meta property="og:image" content="http://yoursite.com/2018/05/12/centos-es/img1.png">
+<meta property="og:updated_time" content="2018-05-11T18:52:36.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Qifan Zhang">
-<meta name="twitter:description" content="—title: CentOS7.4下搭建Elasticsearch6.2.4date: 2018-05-12 02:03:09 tags:###准备 Jdk1.8 ###安装过程  通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，">
+<meta name="twitter:description" content="—title: CentOS7.4下搭建Elasticsearch6.2.4 date: 2018-05-12 02:03:09  准备Jdk1.8 安装过程 通过java –version确认jdk版本。  如果出现openjdk请自行百度“Linux openjdk jdk1.8”  登录Elastic官网下载rpm/tar.gz版本。  sftp传到服务器上，然后tar–">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/12/centos-es/img1.png">
 
 
 
@@ -299,11 +301,11 @@
       
 
       
-        <p>﻿﻿﻿﻿﻿—<br>title: CentOS7.4下搭建Elasticsearch6.2.4<br>date: 2018-05-12 02:03:09</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>###准备</p>
-<p>Jdk1.8</p>
-<p>###安装过程</p>
-<ul>
+        <p>﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿—<br>title: CentOS7.4下搭建Elasticsearch6.2.4</p>
+<p>date: 2018-05-12 02:03:09</p>
+<hr>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Jdk1.8</p>
+<h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ul>
 <li><p>通过java –version确认jdk版本。</p>
 <p> 如果出现openjdk请自行百度“Linux openjdk jdk1.8”</p>
 </li>
@@ -318,9 +320,9 @@
 <li>选一台无相关的电脑，<a href="http://111.111.111.111:9200" target="_blank" rel="noopener">http://111.111.111.111:9200</a> 登录。</li>
 </ul>
 <p>若成功，则说明自用安装存储的搜索引擎基本完成。111.111.111.111为假设的服务器地址。</p>
-<p>###数据导入</p>
-<p>官方API文档:<a href="https://www.elastic.co/guide/en/elasticsearch/client/index.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/client/index.html</a></p>
-<p>着重介绍一下批量插入的方法<br>唯一推荐<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="noopener">Bulk API</a></p>
+<h3 id="数据导入"><a href="#数据导入" class="headerlink" title="数据导入"></a>数据导入</h3><p>官方API文档:<a href="https://www.elastic.co/guide/en/elasticsearch/client/index.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/client/index.html</a></p>
+<p>着重介绍一下批量插入的方法</p>
+<p>唯一推荐<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html" target="_blank" rel="noopener">Bulk API</a></p>
 <pre><code class="bash">action_and_meta_data\n
 optional_source\n
 action_and_meta_data\n
@@ -352,12 +354,9 @@ optional_source\n
 <pre><code class="bash">curl -H <span class="string">"Content-Type: application/json"</span> -s -XPOST localhost:9200/_bulk?pretty --data-bin
 ary @gotobed.json
 </code></pre>
-<p>?pretty是美化输出</p>
-<p>“errors” :false说明操作成功。</p>
-<p>###导入成功</p>
-
-<p>###特殊Error</p>
-<pre><code class="bash">
+<p>?pretty是美化输出，“errors” :false说明操作成功。</p>
+<h3 id="导入成功"><a href="#导入成功" class="headerlink" title="导入成功"></a>导入成功</h3><img src="/2018/05/12/centos-es/img1.png">
+<h3 id="特殊Error"><a href="#特殊Error" class="headerlink" title="特殊Error"></a>特殊Error</h3><pre><code class="bash">
 {
   <span class="string">"error"</span>: {
     <span class="string">"root_cause"</span>: [
@@ -374,18 +373,15 @@ ary @gotobed.json
 </code></pre>
 <p>一个粗暴的解决方案就是改个_index和_type重新插。</p>
 <p>官方在6.0版本的时候给了个<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.0/removal-of-types.html" target="_blank" rel="noopener">解释</a></p>
-<p>###数据导入验证</p>
-<p>1.<a href="http://111.111.111.111:9200/_cat/indices?v" target="_blank" rel="noopener">http://111.111.111.111:9200/_cat/indices?v</a></p>
+<h3 id="数据导入验证"><a href="#数据导入验证" class="headerlink" title="数据导入验证"></a>数据导入验证</h3><p>1.<a href="http://111.111.111.111:9200/_cat/indices?v" target="_blank" rel="noopener">http://111.111.111.111:9200/_cat/indices?v</a></p>
 <p>可以查看所有索引情况。</p>
 <p>2.<a href="http://111.111.111.111:9200/刚才插入的_index的值/刚才插入的_type的值/一个存在的_id" target="_blank" rel="noopener">http://111.111.111.111:9200/刚才插入的_index的值/刚才插入的_type的值/一个存在的_id</a></p>
 <p>可以准确验证单条数据的导入准确度。</p>
 <p>3.<a href="http://111.111.111.111:9200/insur/heal/_search?q=string" target="_blank" rel="noopener">http://111.111.111.111:9200/insur/heal/_search?q=string</a></p>
 <p>string可以是company:幸福人寿，也可以是company:幸福人寿&amp;size=100</p>
-<p>###Acknowledge</p>
-<p>Windows不要尝试数据科学开发，除了PyCharm+Anaconda想不出有什么Windows适合干的数据科学事务了。</p>
+<h3 id="Acknowledge"><a href="#Acknowledge" class="headerlink" title="Acknowledge"></a>Acknowledge</h3><p>Windows不要尝试数据科学开发，除了PyCharm+Anaconda想不出有什么Windows适合干的数据科学事务了。</p>
 <p>Windows+ssh+服务器可以备用。</p>
-<p>###Reference</p>
-<ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
 <li><p>Query DSL：<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a></p>
 </li>
 <li><p>csv转json在线转换器：<a href="https://www.bejson.com/json/col2json/" target="_blank" rel="noopener">https://www.bejson.com/json/col2json/</a></p>
@@ -415,8 +411,8 @@ ary @gotobed.json
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/12/centos-elastic/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/05/03/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -500,7 +496,7 @@ ary @gotobed.json
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -537,7 +533,7 @@ ary @gotobed.json
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tags"><span class="nav-number">1.</span> <span class="nav-text">tags:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装过程"><span class="nav-number">2.</span> <span class="nav-text">安装过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据导入"><span class="nav-number">3.</span> <span class="nav-text">数据导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入成功"><span class="nav-number">4.</span> <span class="nav-text">导入成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊Error"><span class="nav-number">5.</span> <span class="nav-text">特殊Error</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据导入验证"><span class="nav-number">6.</span> <span class="nav-text">数据导入验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Acknowledge"><span class="nav-number">7.</span> <span class="nav-text">Acknowledge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">8.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
